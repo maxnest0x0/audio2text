@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Система конвертации аудиосообщений в текст">
+    <title>Audio2Text</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header-buttons">
+                <button class="header-button" id="docsButton" title="Документация">
+                    <i class="material-icons">book</i>
+                </button>
+                <button class="header-button" id="githubButton" title="GitHub">
+                    <img src="https://github.githubassets.com/favicons/favicon-dark.svg" alt="GitHub" class="github-icon">
+                </button>
+            </div>
+        </header>
+
+        <h1>Система конвертации аудиосообщений в текст</h1>
+
+        <section class="input-area">
+            <h2>Загрузка аудио</h2>
+            <div class="input-buttons">
+                <button id="audioFileButton" class="custom-file-upload" role="button">
+                    <i class="material-icons">upload_file</i> Выбрать файл
+                </button>
+                <button id="recordButton" class="custom-file-upload" role="button">
+                    <i class="material-icons">mic</i> Записать звук
+                </button>
+            </div>
+        </section>
+
+        <section class="output-area">
+            <h2>Распознанный текст</h2>
+            <div id="transcript">
+                <p class="speaker-1"><b>Диктор 1:</b> Привет всем! Как ваши дела? Сегодня у нас очень интересная тема для обсуждения.</p>
+                <p class="speaker-2"><b>Диктор 2:</b> Привет! Да, я согласен. Я думаю, что мы можем начать с самого начала, чтобы все были в курсе.</p>
+                <p class="speaker-1"><b>Диктор 1:</b> Отлично! Тогда, давайте начнём с того, что... эээ... нужно определиться с основными понятиями, чтобы не было путаницы.</p>
+                <p class="speaker-3"><b>Диктор 3:</b> Извините, что вмешиваюсь, но мне кажется, что мы упускаем важный момент. А именно...</p>
+                <p class="speaker-2"><b>Диктор 2:</b> Да, ты прав! Спасибо, что обратил на это внимание. Это действительно важно.</p>
+                <p class="speaker-1"><b>Диктор 1:</b> Хорошо, тогда давайте вернёмся к этому вопросу чуть позже. Сейчас же, давайте продолжим с тем, что мы уже начали обсуждать.</p>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

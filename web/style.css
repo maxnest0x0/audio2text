@@ -1,0 +1,141 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    text-align: center;
+    color: #333;
+}
+
+.header {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.header-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.header-button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-button:hover {
+    background-color: #0056b3;
+}
+
+.github-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.input-area,
+.output-area {
+    margin-bottom: 20px;
+}
+
+.input-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.input-area h2 {
+    width: 100%;
+    text-align: center;
+}
+
+.input-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.custom-file-upload {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+    gap: 5px;
+}
+
+.custom-file-upload:hover {
+    background-color: #0056b3;
+}
+
+#transcript {
+    border: 1px solid #ddd;
+    padding: 10px;
+    min-height: 100px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+.speaker-1 {
+    color: #007bff;
+}
+
+.speaker-2 {
+    color: #28a745;
+}
+
+.speaker-3 {
+    color: #dc3545;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        margin: 10px auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .input-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .custom-file-upload {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+}
