@@ -7,6 +7,7 @@
     <title>Audio2Text</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script type="module" src="script.js" defer></script>
 </head>
 <body>
     <div class="container">
@@ -26,10 +27,11 @@
         <section class="input-area">
             <h2>Загрузка аудио</h2>
             <div class="input-buttons">
-                <button id="audioFileButton" class="custom-file-upload" role="button">
+                <input type="file" id="audioFileInput" class="hidden" accept="audio/*" @change="handleFileChange">
+                <button id="audioFileButton" class="custom-file-upload" @click="handleFileButtonClick">
                     <i class="material-icons">upload_file</i> Выбрать файл
                 </button>
-                <button id="recordButton" class="custom-file-upload" role="button">
+                <button id="recordButton" class="custom-file-upload">
                     <i class="material-icons">mic</i> Записать звук
                 </button>
             </div>

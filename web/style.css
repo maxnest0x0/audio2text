@@ -6,6 +6,10 @@ body {
     color: #333;
 }
 
+.hidden {
+    display: none;
+}
+
 .container {
     width: 80%;
     margin: 20px auto;
