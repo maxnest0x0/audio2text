@@ -1,0 +1,12 @@
+tasks:
+  - init: |
+      python -m venv .venv
+      source .venv/bin/activate
+      pip install --requirement requirements.txt
+    command: |
+      source .venv/bin/activate
+      python main.py
+
+vscode:
+  extensions:
+    - ms-python.python
