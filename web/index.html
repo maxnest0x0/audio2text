@@ -31,8 +31,11 @@
                 <button id="audioFileButton" class="custom-file-upload" @click="handleFileButtonClick">
                     <i class="material-icons">upload_file</i> Выбрать файл
                 </button>
-                <button id="recordButton" class="custom-file-upload">
+                <button id="recordStartButton" class="custom-file-upload" v-if="!isRecording" @click="handleRecordStartClick">
                     <i class="material-icons">mic</i> Записать звук
+                </button>
+                <button id="recordStopButton" class="custom-file-upload" v-if="isRecording" @click="handleRecordStopClick">
+                    <i class="material-icons">stop</i> Остановить запись
                 </button>
             </div>
         </section>
