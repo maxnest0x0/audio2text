@@ -1,5 +1,8 @@
 tasks:
-  - init: |
+  - before: |
+      sudo apt-get update
+      sudo apt-get install --assume-yes ffmpeg
+    init: |
       python -m venv .venv
       source .venv/bin/activate
       pip install --requirement requirements.txt
@@ -10,3 +13,4 @@ tasks:
 vscode:
   extensions:
     - ms-python.python
+    - ms-toolsai.jupyter
