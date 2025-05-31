@@ -13,10 +13,10 @@
     <div class="container">
         <header class="header">
             <div class="header-buttons">
-                <button class="header-button" id="docsButton" title="Документация">
+                <button class="header-button" @click="openDocs" title="Документация">
                     <i class="material-icons">book</i>
                 </button>
-                <button class="header-button" id="githubButton" title="GitHub">
+                <button class="header-button" @click="openRepo" title="Репозиторий">
                     <img src="https://github.githubassets.com/favicons/favicon-dark.svg" alt="GitHub" class="github-icon">
                 </button>
             </div>

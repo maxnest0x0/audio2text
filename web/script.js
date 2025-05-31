@@ -78,7 +78,13 @@ createApp({
         },
         handleRecordStopClick() {
             if (this.recorder) this.recorder.stop();
-        }
+        },
+        openDocs() {
+            window.open('/docs');
+        },
+        openRepo() {
+            window.open('https://github.com/maxnest0x0/audio2text');
+        },
     },
     mounted() {
         document.fonts.ready.finally(() => {
