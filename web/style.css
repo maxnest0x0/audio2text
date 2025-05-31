@@ -98,6 +98,12 @@ h1, h2 {
     background-color: #0056b3;
 }
 
+.custom-file-upload:disabled {
+    background-color: #cccccc;
+    color: #666666;
+    cursor: default;
+}
+
 #transcript {
     border: 1px solid #ddd;
     padding: 10px;

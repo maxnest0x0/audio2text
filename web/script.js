@@ -49,11 +49,9 @@ createApp({
             if (file) this.transcribeAudio(file);
         },
         handleFileButtonClick() {
-            if (this.state !== IDLE) return;
             document.querySelector('#audioFileInput').click();
         },
         handleRecordStartClick() {
-            if (this.state !== IDLE) return;
             this.state = PENDING;
             navigator.mediaDevices.getUserMedia({ audio: true }).then(stream => {
                 this.state = RECORDING;
