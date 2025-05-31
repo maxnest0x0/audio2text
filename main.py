@@ -9,8 +9,8 @@ app = FastAPI()
 transcriber = AudioTranscriber()
 
 @app.post('/api/transcribe')
-async def transcribe(audio: UploadFile):
-    audio = await audio.read()
+def transcribe(audio: UploadFile):
+    audio = audio.file.read()
     audio = bytes_to_tensor(audio)
     transcriber.set_audio(audio)
     text = transcriber.get_result()
