@@ -6,19 +6,15 @@ from model.preprocessing import bytes_to_tensor
 from model.transcription import AudioTranscriber
 
 app = FastAPI()
+transcriber = AudioTranscriber()
 
 @app.post('/api/transcribe')
 async def transcribe(audio: UploadFile):
-    print('Reading file...')
     audio = await audio.read()
-    print('Running ffmpeg...')
     audio = bytes_to_tensor(audio)
-
-    transcriber = AudioTranscriber()
     transcriber.set_audio(audio)
-    print('Transcribing...')
     text = transcriber.get_result()
-    print('Result:', text)
+    print(text)
 
     return {
         'transcription': [
