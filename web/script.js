@@ -80,4 +80,9 @@ createApp({
             if (this.recorder) this.recorder.stop();
         }
     },
+    mounted() {
+        document.fonts.ready.finally(() => {
+            document.body.classList.remove('hidden');
+        });
+    },
 }).mount('.container');

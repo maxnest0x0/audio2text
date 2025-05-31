@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script type="module" src="script.js" defer></script>
 </head>
-<body>
+<body class="hidden">
     <div class="container">
         <header class="header">
             <div class="header-buttons">
@@ -27,7 +27,7 @@
         <section class="input-area">
             <h2>Загрузка аудио</h2>
             <div class="input-buttons">
-                <input type="file" id="audioFileInput" class="hidden" accept="audio/*" @change="handleFileChange">
+                <input type="file" id="audioFileInput" accept="audio/*" @change="handleFileChange" hidden>
                 <button id="audioFileButton" class="custom-file-upload" @click="handleFileButtonClick">
                     <i class="material-icons">upload_file</i> Выбрать файл
                 </button>
