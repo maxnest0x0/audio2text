@@ -118,6 +118,25 @@ h1, h2 {
     color: #dc3545;
 }
 
+#spinner {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 5px solid;
+    border-color: transparent #007bff transparent #007bff;
+    animation: spin 1s ease-in-out infinite;
+    margin: auto;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 @media (max-width: 768px) {
     .container {
         width: 95%;
