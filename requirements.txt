@@ -3,5 +3,6 @@ pydantic
 uvicorn
 python-multipart
 openai-whisper
+pyannote.audio
 torch
 numpy
