@@ -1,15 +1,16 @@
-from pyannote.audio import Pipeline
 import whisper
 import torch
+from pyannote.audio import Pipeline
+from schemas import AudioSegment
 
 class AudioDiarizer:
-    def __init__(self, auth_token, model="pyannote/speaker-diarization-3.1", device=None):
+    def __init__(self, auth_token: str, model: str = "pyannote/speaker-diarization-3.1", device: str = None):
         self.device = torch.device(device or ("cuda" if torch.cuda.is_available() else "cpu"))
 
         self.pipeline = Pipeline.from_pretrained(model, use_auth_token=auth_token)
         self.pipeline.to(self.device)
 
-    def diarize(self, audio, sr=16000):
+    def diarize(self, audio: torch.Tensor, sr=16000) -> list[AudioSegment]:
         source = {
             'waveform': audio.unsqueeze(0),
             'sample_rate': sr,
@@ -22,5 +23,5 @@ class AudioDiarizer:
             speaker = int(speaker.removeprefix('SPEAKER_'))
 
             audio_segment = audio[int(start * sr):int(end * sr)]
-            segments.append((audio_segment, speaker, start, end))
+            segments.append(AudioSegment(audio=audio_segment, speaker=speaker, start=start, end=end))
         return segments
