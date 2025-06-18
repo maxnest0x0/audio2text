@@ -10,6 +10,10 @@ body {
     visibility: hidden;
 }
 
+.non-selectable {
+    user-select: none;
+}
+
 .container {
     width: 80%;
     margin: 20px auto;
@@ -112,15 +116,15 @@ h1, h2 {
     border-radius: 5px;
 }
 
-.speaker-1 {
+.speaker-0 {
     color: #007bff;
 }
 
-.speaker-2 {
+.speaker-1 {
     color: #28a745;
 }
 
-.speaker-3 {
+.speaker-2 {
     color: #dc3545;
 }
 

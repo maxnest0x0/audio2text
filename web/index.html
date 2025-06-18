@@ -44,7 +44,10 @@
             <h2>Распознанный текст</h2>
             <div id="transcript">
                 <div id="spinner" v-if="isTranscribing"></div>
-                <p v-for="{ speaker, text } in transcription" :class="`speaker-${speaker + 1}`"><b>Диктор {{ speaker + 1 }}:</b> {{ text }}</p>
+                <p v-for="{ speaker, text } in transcription" :class="`speaker-${speaker % 3}`">
+                    <b class="non-selectable">Диктор {{ speaker + 1 }}: </b>
+                    {{ text }}
+                </p>
             </div>
         </section>
     </div>
