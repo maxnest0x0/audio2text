@@ -58,6 +58,7 @@ def filter_text(segments: list[TranscriptionSegment]) -> list[TranscriptionSegme
     weird_phrases = [
         'Продолжение следует...',
         'Субтитры сделал DimaTorzok',
+        'Добавил субтитры DimaTorzok',
         'ПОДПИШИСЬ НА КАНАЛ',
     ]
     results = []
