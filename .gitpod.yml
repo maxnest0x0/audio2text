@@ -8,7 +8,11 @@ tasks:
       pip install --requirement requirements.txt
     command: |
       source .venv/bin/activate
-      python main.py
+      until python main.py; do sleep 1; done
+
+ports:
+  - port: 8000
+    visibility: public
 
 vscode:
   extensions:
