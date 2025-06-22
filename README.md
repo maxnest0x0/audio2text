@@ -26,12 +26,12 @@ $ docker run --tty --gpus all --publish 8000:8000 audio2text
 
 ## Usage
 ### Web page
-For PC and mobile users we host the web page at https://8000-maxnest0x0-audio2text-zz67jo9ycnb.ws-eu120.gitpod.io/.
+For PC and mobile users we host the web page at http://176.222.54.175/.
 Note that we are using CPU, as the GPU servers are very expensive nowadays, so the model will work slowly.
 
 ### API
 For developers we provide an API endpoint.
-API documentation is available via [Swagger UI](https://8000-maxnest0x0-audio2text-zz67jo9ycnb.ws-eu120.gitpod.io/docs) and [Redoc](https://8000-maxnest0x0-audio2text-zz67jo9ycnb.ws-eu120.gitpod.io/redoc).
+API documentation is available via [Swagger UI](http://176.222.54.175/docs) and [Redoc](http://176.222.54.175/redoc).
 
 ## Screencast
 
